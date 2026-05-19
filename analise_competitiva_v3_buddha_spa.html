@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Análise Competitiva - Buddha Spa Alto de Pinheiros - Maio 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--principal:#7E0000;--secundaria:#D78B18;--complemento:#425F1D;--text:#2c2c2c;--muted:#6b6b6b;--bg:#faf8f5;--card:#fff;--border:#e8e2d9;--danger:#b91c1c;--warning:#d97706;--success:#15803d;--info:#1d4ed8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.65;font-size:14px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+header{background:linear-gradient(135deg,var(--principal) 0%,#4a0000 100%);color:#fff;padding:48px 0 40px;position:relative;overflow:hidden}
+header::after{content:'';position:absolute;right:-80px;top:-80px;width:400px;height:400px;border-radius:50%;background:var(--secundaria);opacity:.06}
+.header-inner{display:flex;align-items:center;gap:28px;position:relative;z-index:1}
+.header-logo{width:90px;height:90px;border-radius:50%;object-fit:cover;border:3px solid var(--secundaria);flex-shrink:0}
+header h1{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:700;letter-spacing:-.5px}
+header .subtitle{opacity:.85;font-size:14px;margin-top:4px}
+.badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.3px;white-space:nowrap}
+.badge-critical{background:var(--danger);color:#fff}.badge-high{background:var(--warning);color:#fff}.badge-medium{background:#fbbf24;color:#78350f}.badge-low{background:var(--success);color:#fff}.badge-internal{background:var(--principal);color:#fff}.badge-new{background:#7c3aed;color:#fff}
+section{padding:44px 0}section+section{border-top:1px solid var(--border)}
+.section-label{font-family:'Cormorant Garamond',serif;font-size:12px;text-transform:uppercase;letter-spacing:2.5px;color:var(--secundaria);font-weight:600;margin-bottom:4px}
+h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--principal);margin-bottom:20px}
+h3{font-size:15px;font-weight:700;color:var(--principal);margin-bottom:10px}
+.callout{padding:18px 22px;border-radius:8px;margin-bottom:18px;border-left:4px solid}.callout p{font-size:13px;color:var(--muted);margin-bottom:5px}.callout p:last-child{margin-bottom:0}
+.callout-critical{background:#fef2f2;border-color:var(--danger)}.callout-warning{background:#fffbeb;border-color:var(--warning)}.callout-success{background:#f0fdf4;border-color:var(--success)}.callout-info{background:#f0f7ff;border-color:var(--info)}.callout-neutral{background:#f5f3f0;border-color:var(--secundaria)}
+table{width:100%;border-collapse:collapse;margin-bottom:20px;font-size:13px}
+th{background:var(--principal);color:#fff;padding:11px 12px;text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+td{padding:10px 12px;border-bottom:1px solid var(--border)}tr:hover{background:#faf8f5}tr.you{background:#f0fdf4;font-weight:600}tr.you:hover{background:#dcfce7}tr.highlight-row{background:#fef2f2}tr.internal-row{background:#f0fdf4}
+.grid{display:grid;gap:18px;margin-bottom:20px}.grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px;transition:box-shadow .2s}.card:hover{box-shadow:0 4px 20px rgba(0,0,0,.06)}.card h4{font-size:14px;font-weight:700;color:var(--principal);margin-bottom:8px}.card p{font-size:13px;color:var(--muted);margin-bottom:4px}.card p:last-child{margin-bottom:0}.card.card-critical{border-color:var(--danger);border-width:2px}.card.card-warning{border-color:var(--warning);border-width:2px}.card.card-success{border-color:var(--complemento);border-width:2px}
+.metric-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;margin-bottom:22px}
+.metric{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px;text-align:center;border-top:3px solid var(--principal)}.metric .label{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-bottom:4px}.metric .value{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--principal)}
+.chart-bar{display:flex;align-items:center;gap:10px;margin-bottom:6px}.chart-bar .bar-label{width:100px;font-size:12px;font-weight:600;text-align:right;flex-shrink:0}.chart-bar .bar-track{flex:1;background:#f0ede8;border-radius:4px;height:24px;overflow:hidden}.chart-bar .bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:8px;font-size:11px;font-weight:700;color:#fff}.chart-bar .bar-value{font-size:12px;font-weight:600;width:50px;flex-shrink:0}
+.competitor-block{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px;margin-bottom:14px}.competitor-block h4{display:flex;align-items:center;gap:10px;margin-bottom:12px;font-size:15px;color:var(--principal);flex-wrap:wrap}.competitor-block .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.competitor-block ul{list-style:none;padding:0}.competitor-block li{padding:4px 0;font-size:13px;color:var(--muted);border-bottom:1px solid #f0ede8}.competitor-block li:last-child{border:none}.competitor-block li strong{color:var(--text)}
+footer{background:var(--principal);color:rgba(255,255,255,.7);padding:20px 0;text-align:center;font-size:11px}
+.sep{width:60px;height:3px;background:var(--secundaria);border-radius:2px;margin-bottom:18px}
+@media(max-width:768px){header h1{font-size:26px}h2{font-size:22px}.header-inner{flex-direction:column;text-align:center}.competitor-block .detail-grid{grid-template-columns:1fr}.metric-row{grid-template-columns:1fr 1fr}}
+@media print{body{background:#fff}section{page-break-inside:avoid}header{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header><div class="wrap"><div class="header-inner"><img src="logo_buddha.png" alt="Buddha Spa Alto de Pinheiros" class="header-logo"><div><h1>Análise Competitiva</h1><p class="subtitle">Buddha Spa Alto de Pinheiros &bull; 14 Concorrentes Mapeados &bull; Raio 3km &bull; Maio 2026</p></div></div></div></header>
+
+<!-- ========== 1. VISÃO GERAL ========== -->
+<section><div class="wrap">
+<div class="section-label">Visão Geral</div><h2>Posição de Mercado</h2><div class="sep"></div>
+
+<div class="metric-row">
+<div class="metric"><div class="label">Rating Google</div><div class="value">4.7⭐</div></div>
+<div class="metric"><div class="label">Avaliações</div><div class="value">370</div></div>
+<div class="metric"><div class="label">Concorrentes (3km)</div><div class="value">14</div></div>
+<div class="metric"><div class="label">Em menos de 1km</div><div class="value">6</div></div>
+<div class="metric"><div class="label">Unidades Fábio</div><div class="value">3</div></div>
+</div>
+
+<div class="callout callout-neutral"><h3>📌 Contexto do Franqueado</h3>
+<p>Fábio opera <strong>3 unidades Buddha Spa</strong>: Alto de Pinheiros, Vila Madalena (740m) e Pinheiros João Moura (1,61km). Parte do fluxo entre essas unidades é interno ao próprio franqueado &mdash; não é necessariamente perda, mas redistribuição.</p>
+<p>A unidade <strong>Buddha Spa Praça Panamericana</strong> (2,19km) pertence a <strong>outro franqueado</strong>, inaugurada em <strong>dezembro/2024</strong>.</p></div>
+
+<div class="callout callout-critical"><h3>🚨 Dado Revelador: Praça Panamericana</h3>
+<p>A unidade Praça Panamericana acumula <strong>5.0⭐ com 745 avaliações</strong> em apenas ~5 meses. Quase o dobro do Alto de Pinheiros (370) em muito menos tempo. Horário: Seg-Sex 8h-21h, Sab 9h-20h, Dom 10h-17h. Reviews mencionam profissionais por nome (Clara, Letícia, Gabriele, Bruno, Alessandra) e elogiam a unidade como nova e diferenciada.</p></div>
+
+<div class="callout callout-info"><h3>🧘 O Ritual Buddha Spa &mdash; Diferencial Competitivo</h3>
+<p>O Buddha Spa não entrega "apenas uma massagem". Existe todo um <strong>ritual diferenciado de experiência</strong>: início com escalda-pés, sala ambiente temática para relaxar, ritual do chá, aromaterapia exclusiva e a sessão de massagem. Este ritual é um diferencial significativo que a maioria dos concorrentes NÃO oferece.</p></div>
+</div></section>
+
+
+<!-- ========== 3. MAPA DE CONCORRENTES ========== -->
+<section><div class="wrap">
+<div class="section-label">Mapeamento Territorial</div><h2>Mapa de Proximidade: 14 Concorrentes</h2><div class="sep"></div>
+
+<table><thead><tr><th>#</th><th>Concorrente</th><th>Distância</th><th>Rating</th><th>Reviews</th><th>Risco</th><th>Tipo</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Flutuar Float Center</strong></td><td>0,24 km</td><td>-</td><td>-</td><td><span class="badge badge-critical">CRÍTICO</span></td><td>Float (complementar)</td></tr>
+<tr class="highlight-row"><td>2</td><td><strong>Venus'Secret Spa</strong></td><td>0,55 km</td><td>4.9⭐</td><td>747</td><td><span class="badge badge-critical">CRÍTICO</span></td><td>Spa Premium</td></tr>
+<tr><td>3</td><td><strong>Shiatsu Luiza Sato</strong></td><td>0,55 km</td><td>-</td><td>-</td><td><span class="badge badge-high">ALTO</span></td><td>Profissional</td></tr>
+<tr><td>4</td><td><strong>Espaço Girassol</strong></td><td>0,56 km</td><td>4.5⭐</td><td>166</td><td><span class="badge badge-high">ALTO</span></td><td>Eco-sistema Wellness</td></tr>
+<tr><td>5</td><td><strong>Aigai Spa</strong></td><td>0,62 km</td><td>4.6⭐</td><td>180</td><td><span class="badge badge-high">ALTO</span></td><td>Spa Boutique Luxo</td></tr>
+<tr class="internal-row"><td>6</td><td><strong>Buddha Spa Vila Madalena</strong> <span class="badge badge-internal">FÁBIO</span></td><td>0,74 km</td><td>4.6⭐</td><td>340</td><td><span class="badge badge-medium">INTERNO</span></td><td>Mesmo Franqueado</td></tr>
+<tr><td>7</td><td><strong>Freshy Spa Eldorado</strong></td><td>1,29 km</td><td>4.6⭐</td><td>418</td><td><span class="badge badge-high">ALTO</span></td><td>Cadeia Multi-unidades</td></tr>
+<tr><td>8</td><td><strong>Jing Shi Massagens</strong></td><td>1,43 km</td><td>-</td><td>-</td><td><span class="badge badge-medium">MÉDIO</span></td><td>Profissional / Faria Lima</td></tr>
+<tr class="internal-row"><td>9</td><td><strong>Buddha Spa Pinheiros João Moura</strong> <span class="badge badge-internal">FÁBIO</span></td><td>1,61 km</td><td>4.8⭐</td><td>85</td><td><span class="badge badge-medium">INTERNO</span></td><td>Mesmo Franqueado</td></tr>
+<tr><td>10</td><td><strong>Larb Spa</strong></td><td>1,80 km</td><td>-</td><td>-</td><td><span class="badge badge-medium">MÉDIO</span></td><td>Spa Terapêutico</td></tr>
+<tr><td>11</td><td><strong>SpaPelle</strong></td><td>1,81 km</td><td>4.8⭐</td><td>53</td><td><span class="badge badge-low">BAIXO</span></td><td>Estética</td></tr>
+<tr><td>12</td><td><strong>KoKeshi SPA</strong></td><td>1,91 km</td><td>5.0⭐</td><td>50</td><td><span class="badge badge-medium">MÉDIO</span></td><td>Spa Boutique</td></tr>
+<tr class="highlight-row"><td>13</td><td><strong>Buddha Spa Praça Panamericana</strong> <span class="badge badge-new">OUTRO FRANQUEADO</span></td><td>2,19 km</td><td><strong>5.0⭐</strong></td><td><strong>745</strong></td><td><span class="badge badge-critical">CRÍTICO</span></td><td>Inaugurado Dez/2024</td></tr>
+<tr><td>14</td><td><strong>Luiza Sato (São Gualter)</strong></td><td>2,28 km</td><td>-</td><td>-</td><td><span class="badge badge-low">BAIXO</span></td><td>Shiatsu + Pilates</td></tr>
+</tbody></table>
+</div></section>
+
+<!-- ========== 5. COMPARATIVO DE PREÇOS ========== -->
+<section><div class="wrap">
+<div class="section-label">Análise de Preço</div><h2>Comparativo: Massagem Relaxante ~60min</h2><div class="sep"></div>
+
+<div class="callout callout-neutral"><h3>🧘 Lembrete: O Ritual Buddha está Incluído no Preço</h3>
+<p>O preço do Buddha inclui o ritual completo (escalda-pés, ambientação temática, chá, aromaterapia + massagem). A maioria dos concorrentes entrega apenas a sessão de massagem.</p></div>
+
+<table><thead><tr><th>Provedor</th><th>Duração</th><th>Preço</th><th>Ritual?</th><th>Observação</th></tr></thead>
+<tbody>
+<tr style="background:#fffbeb"><td><strong>Espaço Girassol</strong></td><td>60 min</td><td><strong style="color:var(--danger)">R$163,80</strong> <span style="font-size:11px;color:var(--muted);text-decoration:line-through">R$234</span></td><td>❌</td><td>30% desconto ativo &mdash; <strong>preço mais baixo do mercado</strong></td></tr>
+<tr><td><strong>Freshy Spa</strong></td><td>50 min</td><td><strong>R$210,00</strong></td><td>❌</td><td>Promo: pacote 10 sessões com até 40% off</td></tr>
+<tr class="you"><td><strong>Buddha Spa Alto de Pinheiros</strong></td><td>60 min</td><td><strong>R$228,00</strong></td><td>✅ Completo</td><td>Ritual incluído (escalda-pés, chá, aroma)</td></tr>
+<tr class="highlight-row"><td><strong>Buddha Spa Praça Panamericana</strong></td><td>60 min</td><td><strong>R$228,00</strong></td><td>✅ Completo</td><td>Mesmo preço &mdash; competição por experiência</td></tr>
+<tr><td><strong>Venus'Secret Spa</strong></td><td>60 min</td><td><strong>R$298,00</strong></td><td>Parcial</td><td>30% mais cara que Buddha</td></tr>
+<tr><td><strong>Aigai Spa</strong></td><td>50 min</td><td><strong>R$540,00</strong></td><td>✅</td><td>Premium luxo &mdash; 2,4x mais caro</td></tr>
+</tbody></table>
+
+<h3>Ranking Visual de Preço</h3>
+<div style="margin-bottom:18px">
+<div class="chart-bar"><div class="bar-label">Girassol</div><div class="bar-track"><div class="bar-fill" style="width:30%;background:var(--success)">R$163</div></div><div class="bar-value" style="color:var(--success)">↓ Baixo</div></div>
+<div class="chart-bar"><div class="bar-label">Freshy</div><div class="bar-track"><div class="bar-fill" style="width:39%;background:var(--warning)">R$210</div></div><div class="bar-value" style="color:var(--warning)">Médio</div></div>
+<div class="chart-bar"><div class="bar-label" style="color:var(--principal);font-weight:700">Buddha Alto</div><div class="bar-track"><div class="bar-fill" style="width:42%;background:var(--principal)">R$228</div></div><div class="bar-value" style="color:var(--principal);font-weight:700">VOCÊ</div></div>
+<div class="chart-bar"><div class="bar-label">Pça Panam.</div><div class="bar-track"><div class="bar-fill" style="width:42%;background:#7c3aed">R$228</div></div><div class="bar-value" style="color:#7c3aed">= Igual</div></div>
+<div class="chart-bar"><div class="bar-label">Venus</div><div class="bar-track"><div class="bar-fill" style="width:55%;background:var(--danger)">R$298</div></div><div class="bar-value" style="color:var(--danger)">↑ Alto</div></div>
+<div class="chart-bar"><div class="bar-label">Aigai</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#1e1e1e">R$540</div></div><div class="bar-value">Luxo</div></div>
+</div>
+
+<div class="callout callout-success"><h3>📊 Conclusão de Preço</h3>
+<p><strong>Posicionamento competitivo:</strong> R$228 é justo considerando o ritual completo incluído. Acima de Girassol (R$163) e Freshy (R$210), mas abaixo de Venus (R$298) e muito abaixo de Aigai (R$540).</p>
+<p><strong>Atenção:</strong> Girassol com 30% off e Freshy com pacote de 40% em 10 sessões capturam o cliente sensível a preço e o recorrente.</p>
+<p><strong>vs Praça Panamericana:</strong> Mesmo preço (R$228). A competição é 100% por experiência, localização e atendimento &mdash; não por preço.</p></div>
+
+<div class="callout callout-warning"><h3>💡 Promoções Ativas Encontradas (Maio 2026)</h3>
+<p><strong>Buddha Spa Alto de Pinheiros:</strong> Dia das Mães (Mamãe Zen R$377, Mamãe Relax R$368). Vale Bem-Estar a partir de R$150.</p>
+<p><strong>Freshy Spa:</strong> Pacote 10 sessões com até 40% de desconto (promoção permanente e agressiva).</p>
+<p><strong>Espaço Girassol:</strong> 30% de desconto na Relaxante Revigorante (de R$234 por R$163,80).</p>
+<p><strong>Aigai Spa:</strong> Celebrando 10 anos com experiência especial "Waves of Aigai". Gift cards disponíveis.</p>
+<p><strong>Venus'Secret:</strong> Sem promoções públicas visíveis &mdash; estratégia de exclusividade.</p></div>
+</div></section>
+
+<!-- ========== 6. POSICIONAMENTO GOOGLE ========== -->
+<section><div class="wrap">
+<div class="section-label">Presença Digital</div><h2>Posicionamento no Google &mdash; Busca Local</h2><div class="sep"></div>
+
+<div class="callout callout-info"><h3>📍 Como o Google Ranqueia</h3>
+<p>O Google Maps considera <strong>relevância</strong> (correspondência busca↔perfil), <strong>distância</strong> (proximidade do buscador) e <strong>destaque</strong> (volume de avaliações + nota + atividade do perfil). O resultado varia conforme onde o cliente está.</p></div>
+
+<div class="grid grid-2">
+<div class="card"><h4>Busca: "Buddha Spa"</h4>
+<p>Para quem está próximo da Av. Pedroso de Morais, o <strong>Buddha Spa Alto de Pinheiros aparece como resultado principal</strong>. Porém, Praça Panamericana aparece com <strong>5.0⭐ e 745 reviews</strong> (vs 4.7⭐ e 370), podendo atrair o clique do cliente por ter rating perfeito e volume maior.</p></div>
+<div class="card"><h4>Busca: "Spa perto de mim"</h4>
+<p>Na região de Pinheiros/Alto de Pinheiros, a tendência é:</p>
+<p style="margin-top:6px">&bull; <strong>Venus'Secret</strong> (4.9⭐, 747 reviews) &mdash; muito forte<br>
+&bull; <strong>Buddha Spa Alto de Pinheiros</strong> (4.7⭐, 370) &mdash; compete bem<br>
+&bull; <strong>Freshy Spa</strong> (4.6⭐, 418 reviews) &mdash; boa visibilidade<br>
+&bull; <strong>Aigai Spa</strong> (4.6⭐, 180) &mdash; buscas de luxo</p></div>
+</div>
+
+<h3>Ranking de Avaliações Google (Volume)</h3>
+<div style="margin-bottom:18px">
+<div class="chart-bar"><div class="bar-label">Venus</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#f87171">747</div></div><div class="bar-value">4.9⭐</div></div>
+<div class="chart-bar"><div class="bar-label">Pça Panam.</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#7c3aed">745</div></div><div class="bar-value">5.0⭐</div></div>
+<div class="chart-bar"><div class="bar-label">Freshy</div><div class="bar-track"><div class="bar-fill" style="width:56%;background:var(--warning)">418</div></div><div class="bar-value">4.6⭐</div></div>
+<div class="chart-bar"><div class="bar-label" style="color:var(--principal);font-weight:700">Alto Pinheiros</div><div class="bar-track"><div class="bar-fill" style="width:50%;background:var(--principal)">370</div></div><div class="bar-value" style="font-weight:700">4.7⭐</div></div>
+<div class="chart-bar"><div class="bar-label">Vila Madalena</div><div class="bar-track"><div class="bar-fill" style="width:46%;background:var(--secundaria)">340</div></div><div class="bar-value">4.6⭐</div></div>
+<div class="chart-bar"><div class="bar-label">Aigai</div><div class="bar-track"><div class="bar-fill" style="width:24%;background:#64748b">180</div></div><div class="bar-value">4.6⭐</div></div>
+<div class="chart-bar"><div class="bar-label">Girassol</div><div class="bar-track"><div class="bar-fill" style="width:22%;background:#94a3b8">166</div></div><div class="bar-value">4.5⭐</div></div>
+<div class="chart-bar"><div class="bar-label">João Moura</div><div class="bar-track"><div class="bar-fill" style="width:11%;background:var(--complemento)">85</div></div><div class="bar-value">4.8⭐</div></div>
+</div>
+
+<div class="callout callout-warning"><h3>🔍 Ponto de Atenção: Instagram</h3>
+<p>O perfil do Instagram é <strong>compartilhado</strong> entre unidades (@buddhaspa.madalena.pinheiros). O perfil antigo @buddhaspa.altodepinheiros tem <strong>704 seguidores mas apenas 4 publicações</strong> e redireciona. Isso pode confundir o cliente sobre qual unidade está sendo comunicada.</p>
+<p>Comparativo: Venus'Secret e Aigai Spa têm identidade digital individual forte e consolidada.</p></div>
+</div></section>
+
+<!-- ========== 7. FATOR HUMANO ========== -->
+<section><div class="wrap">
+<div class="section-label">Inteligência de Avaliações</div><h2>O Fator Humano: Profissionais e Avaliações</h2><div class="sep"></div>
+
+<div class="callout callout-neutral"><h3>💡 Insight: Reviews que mencionam profissionais elevam o rating</h3>
+<p>Concorrentes com melhor rating têm em comum: clientes mencionam terapeutas por nome nos reviews. Isso gera ciclo virtuoso &mdash; novos clientes buscam por aquela profissional → mais avaliações → rating sobe.</p>
+<p>As terapeutas do Buddha Spa Alto de Pinheiros são <strong>treinadas e especializadas</strong> (passam por treinamentos rigorosos da rede). O gap não é técnico mas de <strong>visibilidade e incentivo à avaliação</strong>: os clientes não estão sendo incentivados a mencionar as profissionais por nome.</p></div>
+
+<table><thead><tr><th>Local</th><th>Rating</th><th>Profissionais Mencionados</th><th>Frequência em Reviews</th></tr></thead>
+<tbody>
+<tr class="highlight-row"><td><strong>Buddha Spa Praça Panamericana</strong></td><td>5.0⭐</td><td>Clara, Letícia, Gabriele, Bruno, Alessandra, Carol</td><td>Quase todo review menciona nome</td></tr>
+<tr><td>Venus'Secret Spa</td><td>4.9⭐</td><td>Vanderleia (Van) &mdash; profissional bem avaliada que eleva a busca e reputação do spa</td><td>Alta &mdash; Van é referência</td></tr>
+<tr><td>KoKeshi SPA</td><td>5.0⭐</td><td>Priscila</td><td>100% dos reviews</td></tr>
+<tr><td>Buddha Spa João Moura</td><td>4.8⭐</td><td>Joelma, Alice, Janaína</td><td>Frequente</td></tr>
+<tr class="you"><td><strong>Buddha Spa Alto de Pinheiros</strong></td><td>4.7⭐</td><td>Micheline (pontual)</td><td>Baixa &mdash; poucos reviews nomeiam</td></tr>
+</tbody></table>
+
+<div class="callout callout-success"><h3>✅ Ação Recomendada</h3>
+<p>Implementar estratégia pós-atendimento para incentivar clientes a avaliar e mencionar a terapeuta por nome. A Praça Panamericana faz isso com excelência &mdash; 745 reviews em 5 meses, quase todos com nomes. Pode ser um script no checkout ou mensagem WhatsApp pós-sessão.</p></div>
+</div></section>
+
+<!-- ========== 8. DIAGNÓSTICO ========== -->
+<section><div class="wrap">
+<div class="section-label">Diagnóstico</div><h2>Cenários da Queda de Atendimento</h2><div class="sep"></div>
+
+<div class="grid grid-2">
+<div class="card card-critical"><h4>🔴 Cenário 1: Canibalização pela Praça Panamericana</h4>
+<p><strong>Probabilidade: Alta (dados sugerem)</strong></p>
+<p>Inaugurada dez/2024 por outro franqueado. 5.0⭐ e 745 reviews em ~5 meses &mdash; volume excepcional. Mesmo preço (R$228), mesma marca. Cliente busca "Buddha Spa" e pode escolher a unidade com rating perfeito.</p>
+<p style="margin-top:6px"><strong></strong> </p></div>
+
+<div class="card card-warning"><h4>🟠 Cenário 2: Saturação de Mercado + Promoções Agressivas</h4>
+<p><strong>Probabilidade: Moderada</strong></p>
+<p>14 concorrentes em 3km, 6 em menos de 1km. Girassol com R$163 (30% off), Freshy com pacote 40% off. O mercado está mais fragmentado e o bolo está sendo dividido por mais players e promoções agressivas.</p></div>
+
+<div class="card card-warning"><h4>🟠 Cenário 3: Gap de Visibilidade Digital</h4>
+<p><strong>Probabilidade: Moderada</strong></p>
+<p>Venus (747 reviews) e Praça Panamericana (745) dominam ranking Google. Buddha Spa Alto de Pinheiros tem metade (370). Instagram compartilhado entre unidades pode estar dilui a presença, avaliar e comparar.</p></div>
+
+<div class="card"><h4>🟡 Cenário 4: Sazonalidade</h4>
+<p><strong>A verificar</strong></p>
+<p>Comparar jan-abr 2026 vs jan-abr 2025. Se 2025 era estável e 2026 caiu, confirma impacto de fatores novos (Praça Panamericana, promoções da concorrência).</p></div>
+</div>
+</div></section>
+
+<!-- ========== 9. RECOMENDAÇÕES ========== -->
+<section style="background:linear-gradient(135deg,#f8f5f0,#f0ede8)"><div class="wrap">
+<div class="section-label">Plano de Ação</div><h2>Recomendações para Fábio</h2><div class="sep"></div>
+
+<div class="grid grid-2">
+<div class="card card-success"><h4>✅ Imediato: Diagnóstico com Dados</h4>
+<p>&bull; Comparar vouchers jan-abr 2026 vs 2025 &mdash; sazonalidade ou queda real?</p>
+<p>&bull; Líder comercial: analisar demais fontes de receita (Gympass, TotalPass, ClassPass, balcão, pacotes).</p>
+<p>&bull; Verificar se clientes do Alto de Pinheiros aparecem agora na Praça Panamericana.</p>
+<p>&bull; A queda começou quando exatamente? Se jan/2025, coincide com inauguração da Praça Panamericana.</p></div>
+
+<div class="card card-success"><h4>✅ Curto Prazo (30 dias): Avaliações Google</h4>
+<p>&bull; Meta: atingir 450+ reviews (hoje 370). Cada review positivo melhora ranking.</p>
+<p>&bull; Incentivar menção de terapeutas por nome &mdash; a Praça Panamericana faz isso com excelência.</p>
+<p>&bull; Responder 100% dos reviews (positivos e negativos). Google favorece perfis ativos.</p>
+<p>&bull; Atualizar Google Meu Negócio com fotos recentes e posts.</p></div>
+
+<div class="card card-success"><h4>✅ Médio Prazo (30-60 dias): Comunicação do Ritual</h4>
+<p>&bull; O ritual Buddha (escalda-pés, chá, aromaterapia, ambientação) é diferencial forte que a maioria dos concorrentes NÃO tem &mdash; comunicar mais no Google, Instagram e e-commerce.</p>
+<p>&bull; Criar conteúdo visual (reels/vídeos) mostrando o ritual completo &mdash; gera desejo e diferenciação.</p>
+<p>&bull; Avaliar se Instagram precisa de perfil próprio da unidade (hoje é compartilhado com outra unidade do Fábio).</p></div>
+
+<div class="card card-success"><h4>✅ Médio Prazo: Retenção e Competitividade</h4>
+<p>&bull; Avaliar viabilidade de pacotes de fidelidade (Freshy oferece 40% em 10 sessões, Girassol tem 30% off &mdash; capturam cliente recorrente).</p>
+<p>&bull; Reativar clientes inativos dos últimos 6 meses com oferta de retorno.</p>
+<p>&bull; Considerar promoções sazonais mais agressivas para competir no período.</p></div>
+
+<div class="card" style="grid-column:1/-1;border-color:var(--principal);border-width:2px"><h4>⚠️ Longo Prazo: Diálogo com Franqueadora</h4>
+<p>A Praça Panamericana (outro franqueado, dez/2024) a 2,19km acumula 5.0⭐ e 745 reviews em 5 meses. Ter 4 unidades Buddha (3 do Fábio + 1 de outro franqueado) em raio de 2km pode estar canibalizando a marca na região inteira. Recomenda-se levar essa análise territorial para a franqueadora para revisão da política de abertura de novas unidades na mesma região.</p></div>
+</div>
+</div></section>
+
+<footer><div class="wrap">Análise Competitiva &mdash; Buddha Spa Alto de Pinheiros &bull; Maio 2026 &bull; Dados: Google Maps, Google Meu Negócio, Websites Públicos, E-commerces, Reviews &bull; Fontes: dados públicos externos</div></footer>
+
+</body></html>
